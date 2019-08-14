@@ -1,0 +1,78 @@
+body {
+  background-color: #333;
+}
+
+#Container .loadingContainer {
+  display: none;
+}
+
+#Container.loading .loadingContainer {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+#Container.loading .loadingContainer span {
+  width: 1em;
+  height: 1em;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.25em;
+}
+#Container.loading .loadingContainer span.first {
+  animation: blinkAndWait 2s forwards linear infinite;
+}
+#Container.loading .loadingContainer span.second {
+  animation: blink 1s forwards linear infinite 0.5s;
+}
+#Container.loading .loadingContainer span.third {
+  animation: blinkAndWait 2s forwards linear infinite 1s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.3;
+    width: 0.5em;
+    height: 0.5em;
+    margin: 0.25em 0.5em 0.25em 0.25em;
+  }
+  50% {
+    opacity: 1;
+    width: 1em;
+    height: 1em;
+    margin: 0 0.25em 0 0;
+  }
+  100% {
+    opacity: 0.3;
+    width: 0.5em;
+    height: 0.5em;
+    margin: 0.25em 0.5em 0.25em 0.25em;
+  }
+}
+@keyframes blinkAndWait {
+  0% {
+    opacity: 0.3;
+    width: 0.5em;
+    height: 0.5em;
+    margin: 0.25em 0.5em 0.25em 0.25em;
+  }
+  25% {
+    opacity: 1;
+    width: 1em;
+    height: 1em;
+    margin: 0 0.25em 0 0;
+  }
+  50% {
+    opacity: 0.3;
+    width: 0.5em;
+    height: 0.5em;
+    margin: 0.25em 0.5em 0.25em 0.25em;
+  }
+  100% {
+    opacity: 0.3;
+    width: 0.5em;
+    height: 0.5em;
+    margin: 0.25em 0.5em 0.25em 0.25em;
+  }
+}
